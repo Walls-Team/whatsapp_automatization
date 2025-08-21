@@ -20,7 +20,7 @@ async function runAllTasks() {
 // Cron job: ejecuta el manager el día 1 de cada mes a las 9:00
 cron.schedule("0 9 1 * *", runAllTasks);
 
-cron.schedule("0 11 * * *", executeTask, {
+cron.schedule("0 11 * * *", runAllTasks, {
   timezone: "Etc/UTC",
 });
 
